@@ -10,7 +10,7 @@ public class NormalTweet extends Tweet implements Tweetable {
 
     @Override
     public boolean isImportant() {
-        return false;
+        return false; // false
     }
 
     public String getMessage() {
