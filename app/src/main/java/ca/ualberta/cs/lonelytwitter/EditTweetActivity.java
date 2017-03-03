@@ -11,15 +11,16 @@ public class EditTweetActivity extends Activity {
 
     private TextView editTweetsView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_tweet);
 
-
+        Tweet edittweet = (Tweet)getIntent().getSerializableExtra("sendtweet");
         // display the received data
         editTweetsView = (TextView) findViewById(R.id.textView_edit);
-        editTweetsView.setText(getIntent().getExtras().getString("sendtweet"));
+        editTweetsView.setText(edittweet.getMessage());
 
     }
 }
